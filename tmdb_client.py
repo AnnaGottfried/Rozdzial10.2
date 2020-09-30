@@ -1,7 +1,7 @@
 import requests
+import config
 
-api_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOTM3NjBjOTNjYWY5MTExNDRkNWQzNzM3NDdlYmNkZCIsInN1YiI6IjVmNzA4Y2VkZDU1ZTRkMDAzNDczZjM2MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.N2vxspBW7XLhfQicXVs3AajLSElFUVI6VUYpinbTFvw"
-
+api_token=config.api_token
 
 def get_popular_movies():
     endpoint = "https://api.themoviedb.org/3/movie/popular"
@@ -19,8 +19,6 @@ def get_poster_url(poster_api_path, size="w342"):
 
 def get_movies(how_many, list_type):
     data = get_movies_list(list_type)
-    print(list_type)
-    print(data)
     return data["results"][:how_many]
 
     ''' data = get_popular_movies() data["results"][:how_many]'''

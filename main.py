@@ -17,7 +17,7 @@ def homepage():
     if selected_list not in nowa_lista:
         selected_list="popular"
     movies = tmdb_client.get_movies(how_many=8, list_type=selected_list)
-    print(selected_list)
+
     return render_template("homepage.html", movies=movies, current_list=selected_list,nowa_lista=nowa_lista)
 
 
