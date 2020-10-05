@@ -1,6 +1,6 @@
-# Rozdzial10.2
+w config.py należy ustawić wartość api_token 
 
-set FLASK_APP=main.py
-set FLASK_ENV=development
-set FLASK_DEBUG=1
-python -m flask run
+testy uruchomienie :
+pytest tests/test_get_single_movie_cast.py
+pytest tests/test_get_movie_images.py
+pytest tests/test_get_single_movie.py
